@@ -194,60 +194,6 @@
             color: var(--bailey-pink-dark);
         }
 
-        /* Video Section */
-        .video-container {
-            position: relative;
-            aspect-ratio: 16/9;
-            background: linear-gradient(to bottom right, var(--bailey-teal), var(--bailey-teal-dark));
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-            margin-bottom: 24px;
-            cursor: pointer;
-        }
-
-        .video-play {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .play-button {
-            background-color: rgba(255,255,255,0.9);
-            backdrop-filter: blur(4px);
-            border-radius: 9999px;
-            padding: 24px;
-            transition: transform 0.3s;
-        }
-
-        .video-container:hover .play-button {
-            transform: scale(1.1);
-        }
-
-        .play-icon {
-            width: 48px;
-            height: 48px;
-            color: var(--bailey-teal);
-        }
-
-        .video-caption {
-            position: absolute;
-            bottom: 16px;
-            left: 16px;
-            background-color: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            padding: 8px 16px;
-            border-radius: 9999px;
-        }
-
-        .video-caption-text {
-            color: white;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
         /* Buttons */
         .btn-primary {
             width: 100%;
@@ -1367,20 +1313,6 @@
                 <div class="pulse-dot"></div>
                 <span class="badge-text">One-Time Offer • This page won't show again after you continue</span>
                 <div class="pulse-dot"></div>
-            </div>
-
-            <!-- Video Placeholder -->
-            <div class="video-container">
-                <div class="video-play">
-                    <div class="play-button">
-                        <svg class="play-icon" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="video-caption">
-                    <p class="video-caption-text">▶ Click to hear why this matters</p>
-                </div>
             </div>
 
             <button class="btn-primary">YES, ADD THE CONVERSION VAULT FOR $27</button>
