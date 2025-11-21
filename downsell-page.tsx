@@ -58,80 +58,187 @@ export default function DownsellPage() {
       <div className="h-20"></div>
 
       {/* ============================================
-          SECTION 1: HERO
-          PSYCHOLOGY: Lead with the pain (blank page paralysis)
-          Position Vault as the solution to challenge implementation gap
-          Video gives Bailey's warm personality vs just sales copy
-          CREATIVE CHOICE: Giant badge above headline creates "final step" completion psychology
-          Making $27 offer impossible to miss reduces confusion and increases clarity
+          SECTION 1: HERO - SIGNATURE ARTISTIC MOMENT
+          CREATIVE CONCEPT: "Last Chance Card" - feels like Bailey sliding you a handwritten note
+          TEXTURE: Subtle paper grain + soft gradient creates warmth
+          PATTERN: Tiny dollar signs at 3% opacity = subtle "this makes you money" motif
+          HAND-DRAWN: Decorative elements add personality without childishness
+          PSYCHOLOGY: Removed video to make price the HERO - instant visual impact
           ============================================ */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
+      <section className="relative max-w-5xl mx-auto px-4 py-16 overflow-hidden">
 
-        {/* SIGNATURE MOMENT 1: Progress badge - makes this feel like helpful step, not surprise upsell */}
-        <div className="flex items-center justify-center mb-6">
-          <div className="bg-gradient-to-r from-[#9DB4A8] to-[#4A7C72] text-white px-6 py-3 rounded-full shadow-lg">
-            <p className="text-xs font-bold tracking-widest uppercase mb-1">Step 2 of 2 • Optional Upgrade</p>
-            <p className="text-lg font-bold">One-Time $27 Add-On • Only on This Page</p>
+        {/* ARTISTIC LAYER: Subtle background pattern - dollar signs at ultra-low opacity */}
+        {/* Creates subconscious "money/value" association without being obvious */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+          <svg className="w-full h-full" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='40' font-size='24' fill='%23E85C7B' opacity='0.3'%3E$%3C/text%3E%3C/svg%3E")`}}></svg>
+        </div>
+
+        {/* TEXTURE: Soft paper grain overlay on entire hero */}
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjUiLz48L3N2Zz4=')]"></div>
+
+        {/* SIGNATURE MOMENT 1: Hand-drawn "One-Time" stamp badge */}
+        {/* ARTISTIC: Rotated badge with rough edges feels urgent but playful */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="relative">
+            {/* Hand-drawn circle background */}
+            <svg className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(100%+2rem)] -rotate-3" viewBox="0 0 200 100" fill="none">
+              <ellipse cx="100" cy="50" rx="95" ry="45" stroke="#E85C7B" strokeWidth="3" strokeDasharray="2,3" fill="#F4C7C3" fillOpacity="0.2"/>
+            </svg>
+            <div className="relative bg-gradient-to-r from-[#F4C7C3] to-[#E85C7B] px-8 py-4 rounded-lg shadow-lg transform -rotate-1">
+              <p className="text-xs font-black tracking-[0.2em] uppercase text-white mb-1">⚡ One-Time $27 Offer</p>
+              <p className="text-sm font-semibold text-white/90">Step 2 of 2 • Only Shows Once</p>
+            </div>
           </div>
         </div>
 
-        {/* Main headline - speaks to the implementation gap */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#2D2D2D] text-center leading-tight mb-4">
-          Before You Join the Challenge…<br />
-          <span className="relative inline-block mt-2">
-            Want My Best-Converting Etsy Words, Thumbnails & Tags
-            {/* Hand-drawn underline - Bailey's signature style */}
-            <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
-              <path d="M2 5C50 3 100 2 150 3C200 4 250 5 298 6" stroke="#F4C7C3" strokeWidth="3" strokeLinecap="round"/>
+        {/* Main headline with artistic treatment */}
+        <div className="text-center mb-6">
+          <p className="text-sm font-medium text-[#9DB4A8] uppercase tracking-widest mb-4">Before You Start the Challenge...</p>
+
+          <h1 className="text-4xl md:text-6xl font-black text-[#2D2D2D] leading-tight mb-6">
+            Want My Best-Converting<br />
+            <span className="relative inline-block">
+              <span className="relative z-10">Etsy Words, Thumbnails & Tags</span>
+              {/* ARTISTIC: Rough hand-drawn highlight background */}
+              <svg className="absolute inset-0 w-full h-full -z-0" viewBox="0 0 500 80" preserveAspectRatio="none">
+                <path d="M5,40 Q250,20 495,45 Q250,70 5,40 Z" fill="#F4C7C3" opacity="0.3"/>
+              </svg>
+            </span>
+            <br />
+            <span className="text-[#9DB4A8]">Done For You?</span>
+          </h1>
+        </div>
+
+        {/* CREATIVE HERO: Giant $27 price as visual centerpiece (NO VIDEO) */}
+        {/* PSYCHOLOGY: Price shock creates "wait WHAT?!" reaction immediately */}
+        {/* ARTISTIC: Gradient, glow, decorative elements make it celebratory not cheap */}
+        <div className="relative max-w-3xl mx-auto mb-12">
+
+          {/* Decorative bracket flourishes around price */}
+          <div className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 text-[#F4C7C3] opacity-40">
+            <svg width="40" height="120" viewBox="0 0 40 120" fill="none">
+              <path d="M35,0 Q5,0 5,30 L5,90 Q5,120 35,120" stroke="currentColor" strokeWidth="3" fill="none"/>
             </svg>
-          </span>
-          <br />
-          <span className="text-[#9DB4A8]">Done For You?</span>
-        </h1>
+          </div>
+          <div className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 text-[#F4C7C3] opacity-40">
+            <svg width="40" height="120" viewBox="0 0 40 120" fill="none">
+              <path d="M5,0 Q35,0 35,30 L35,90 Q35,120 5,120" stroke="currentColor" strokeWidth="3" fill="none"/>
+            </svg>
+          </div>
 
-        {/* Subheadline - positions this as practical, not transformational */}
-        <p className="text-lg text-center text-[#5D4037] max-w-2xl mx-auto mb-4">
-          This is the plug-and-play Conversion Vault I use so my listings don't flop.
-        </p>
+          {/* Price comparison with dramatic contrast */}
+          <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-[#F4C7C3]/30 relative overflow-hidden">
 
-        {/* CREATIVE CHOICE: Clear framing of the offer context */}
-        <p className="text-base text-center text-[#9DB4A8] font-semibold max-w-2xl mx-auto mb-8">
-          One-time $27 add-on • Only on this page before the challenge
-        </p>
+            {/* Subtle radial gradient behind price */}
+            <div className="absolute inset-0 bg-gradient-radial from-[#F4C7C3]/10 via-transparent to-transparent"></div>
 
-        {/* CHANGE #1: Hero VIDEO - 16:9 format, prominent, with clear 2-min overlay */}
-        {/* PSYCHOLOGY: Video humanizes the offer, lets Bailey explain
-            the value in her warm, authentic voice vs just sales copy
-            CREATIVE CHOICE: Making video the hero element above price creates
-            trust before asking. Play button and time stamp reduce friction. */}
-        <div className="relative aspect-video bg-gradient-to-br from-[#9DB4A8] to-[#4A7C72] rounded-2xl overflow-hidden shadow-2xl mb-8 group cursor-pointer border-4 border-[#F4C7C3]/30">
-          {/* Play button */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-white/95 backdrop-blur-sm rounded-full p-8 group-hover:scale-110 group-hover:bg-[#F4C7C3] transition-all duration-300 shadow-xl">
-              <svg className="w-16 h-16 text-[#9DB4A8] group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
+            <div className="relative z-10 text-center">
+              {/* Old price - tiny and insignificant */}
+              <div className="mb-4">
+                <p className="text-sm text-gray-500 mb-1">Full Program Value</p>
+                <p className="text-3xl font-bold text-gray-400 line-through opacity-50">$497</p>
+              </div>
+
+              {/* Arrow pointing down */}
+              <svg className="w-8 h-8 mx-auto mb-4 text-[#9DB4A8]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 3a1 1 0 011 1v10.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clipRule="evenodd" />
+              </svg>
+
+              {/* GIANT $27 - THE HERO */}
+              <div className="mb-6">
+                <p className="text-base font-bold text-[#E85C7B] uppercase tracking-wider mb-3">Just The Vault Today</p>
+                <div className="relative inline-block">
+                  {/* Glow effect behind price */}
+                  <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#F4C7C3] to-[#E85C7B] opacity-30"></div>
+
+                  {/* The price itself with gradient */}
+                  <p className="relative text-[10rem] md:text-[14rem] font-black leading-none tracking-tighter bg-gradient-to-br from-[#F4C7C3] via-[#E85C7B] to-[#F4C7C3] bg-clip-text text-transparent drop-shadow-lg">
+                    $27
+                  </p>
+
+                  {/* Hand-drawn wavy underline */}
+                  <svg className="absolute -bottom-4 left-0 w-full h-8" viewBox="0 0 400 30" preserveAspectRatio="none">
+                    <path d="M0,15 Q100,5 200,15 T400,15" stroke="#F4C7C3" strokeWidth="4" fill="none" strokeLinecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              {/* "You save" badge with hand-drawn style */}
+              <div className="inline-block relative mb-4">
+                {/* Rough circle background */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 60">
+                  <ellipse cx="100" cy="30" rx="98" ry="28" fill="#9DB4A8" opacity="0.15"/>
+                </svg>
+                <p className="relative px-6 py-2 font-bold text-[#4A7C72] text-lg">
+                  YOU SAVE $470+
+                </p>
+              </div>
+
+              {/* Subtext with personality */}
+              <p className="text-lg text-[#5D4037] font-medium">
+                One-time payment • <span className="text-[#9DB4A8]">Less than lunch</span>
+              </p>
+
+              {/* ARTISTIC: Hand-drawn arrow pointing to CTA below */}
+              <svg className="w-12 h-16 mx-auto mt-6 text-[#F4C7C3] animate-bounce" viewBox="0 0 40 60" fill="none">
+                <path d="M20,5 Q22,25 20,45 M20,45 L15,38 M20,45 L25,38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           </div>
-          {/* Video caption with clear time */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-sm px-6 py-3 rounded-full">
-            <p className="text-white text-base font-bold whitespace-nowrap">▶ Click to listen – 2-minute video</p>
+        </div>
+
+        {/* Benefit bullets with icons */}
+        <div className="max-w-2xl mx-auto mb-10">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div className="text-3xl mb-2">📝</div>
+              <p className="text-sm font-semibold text-[#2D2D2D]">30+ Swipe Files</p>
+              <p className="text-xs text-gray-600">Plug-and-play copy</p>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">🎨</div>
+              <p className="text-sm font-semibold text-[#2D2D2D]">5 Visual Frameworks</p>
+              <p className="text-xs text-gray-600">Thumbnail templates</p>
+            </div>
+            <div>
+              <div className="text-3xl mb-2">🏷️</div>
+              <p className="text-sm font-semibold text-[#2D2D2D]">Tag Patterns</p>
+              <p className="text-xs text-gray-600">Tested keywords</p>
+            </div>
           </div>
         </div>
 
-        {/* Primary CTA - strong, clear, benefit-focused */}
-        {/* PSYCHOLOGY: "Add" implies this is additional to something they
-            already have (challenge spot), reduces resistance */}
-        <button className="w-full md:w-auto md:min-w-[400px] mx-auto block bg-[#F4C7C3] hover:bg-[#E8B5B0] text-[#5D4037] font-bold text-lg py-5 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 mb-4">
-          YES, ADD THE CONVERSION VAULT FOR $27
-        </button>
+        {/* Primary CTA with artistic treatment */}
+        {/* ARTISTIC: Layered shadows and hover effects make it tactile */}
+        <div className="text-center">
+          <button className="group relative w-full md:w-auto md:min-w-[500px] mx-auto block bg-gradient-to-r from-[#F4C7C3] to-[#E85C7B] hover:from-[#E85C7B] hover:to-[#F4C7C3] text-white font-black text-xl py-6 px-10 rounded-full shadow-[0_8px_0px_0px_rgba(232,92,123,0.3),0_13px_24px_rgba(232,92,123,0.2)] hover:shadow-[0_4px_0px_0px_rgba(232,92,123,0.3),0_8px_16px_rgba(232,92,123,0.3)] transition-all duration-200 transform hover:-translate-y-1 active:translate-y-1 active:shadow-none mb-4">
+            <span className="relative z-10">YES! ADD THE VAULT FOR $27</span>
+            {/* Shine effect on hover */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+          </button>
 
-        {/* No-thanks link - must provide exit, but make it subtle */}
-        <p className="text-center">
-          <a href="#" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
-            No thanks, I'll join the challenge without the Vault
-          </a>
-        </p>
+          {/* Security badges */}
+          <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-3">
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>
+              Secure checkout
+            </span>
+            <span>•</span>
+            <span>Instant access</span>
+            <span>•</span>
+            <span>7-day guarantee</span>
+          </div>
+
+          {/* No-thanks link - subtle */}
+          <p className="text-center">
+            <a href="#" className="text-sm text-gray-400 hover:text-gray-600 transition-colors underline">
+              No thanks, join challenge without Vault
+            </a>
+          </p>
+        </div>
+
       </section>
 
       {/* ============================================
@@ -139,9 +246,16 @@ export default function DownsellPage() {
           PSYCHOLOGY: Addresses the "why do I need this?" objection
           Shows the implementation gap: knowing what to do ≠ doing it
           Timeline visual makes the problem concrete and relatable
+          ARTISTIC: Canvas texture softens harsh black, adds sophistication
           ============================================ */}
-      <section className="bg-[#2D2D2D] py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative bg-[#2D2D2D] py-16 px-4 overflow-hidden">
+        {/* TEXTURE: Subtle canvas weave on dark background prevents harsh digital feel */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iY2FudmFzIiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4zIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2NhbnZhcykiLz48L3N2Zz4=')]"></div>
+
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#2D2D2D] to-transparent opacity-50 pointer-events-none"></div>
+
+        <div className="relative max-w-4xl mx-auto">
 
           {/* Section label */}
           <p className="text-xs font-semibold tracking-wider text-[#F4C7C3] uppercase text-center mb-4">
@@ -362,8 +476,19 @@ export default function DownsellPage() {
           <div className="space-y-8">
 
             {/* ITEM 1: Listing Copy Swipe Bank */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="grid md:grid-cols-3 gap-6 p-8">
+            {/* ARTISTIC: Cards with layered shadows, slight tilt, texture overlay */}
+            <div className="group relative bg-white rounded-2xl shadow-[0_4px_0_0_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.05),0_16px_32px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+              {/* Subtle linen texture overlay */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjEuMiIgbnVtT2N0YXZlcz0iMyIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIi8+PC9zdmc+')]"></div>
+
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                <svg viewBox="0 0 100 100" className="text-[#F4C7C3]">
+                  <circle cx="100" cy="0" r="80" fill="currentColor"/>
+                </svg>
+              </div>
+
+              <div className="relative grid md:grid-cols-3 gap-6 p-8">
 
                 {/* Left: Icon + headline */}
                 <div className="md:col-span-2">
