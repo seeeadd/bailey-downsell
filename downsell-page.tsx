@@ -140,14 +140,35 @@ export default function DownsellPage() {
           {/* CREATIVE CHOICE: Not boring bullets - each item gets illustrated
               background shape with alternating colors. Makes it scannable
               and visually interesting without cluttering. */}
+          {/* CREATIVE CHOICE: Custom illustrated graphics for each item
+              instead of boring checkmarks. Each icon is a visual metaphor
+              for what they're actually getting. */}
           <div className="space-y-4 sm:space-y-5 px-4">
 
-            {/* Bullet 1 - Pink background */}
-            <div className="relative bg-gradient-to-br from-[#F4C7C3]/20 to-[#F4C7C3]/10 rounded-2xl p-5 sm:p-6 border border-[#F4C7C3]/30">
+            {/* Bullet 1 - 7-Day Replay Pass with VINTAGE TICKET graphic */}
+            <div className="relative bg-gradient-to-br from-[#F4C7C3]/20 to-[#F4C7C3]/10 rounded-2xl p-5 sm:p-6 border-2 border-dashed border-[#E85C7B]/30 overflow-hidden">
+              {/* Decorative corner stars */}
+              <div className="absolute top-2 right-2 text-[#E85C7B]/20">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5L8 14 2 9.5h7.5z"/>
+                </svg>
+              </div>
+
               <div className="flex items-start gap-4 sm:gap-5">
-                <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#E85C7B] flex items-center justify-center mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                {/* CUSTOM GRAPHIC: Vintage ticket stub with perforated edge */}
+                <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 mt-1">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Ticket body */}
+                    <rect x="4" y="12" width="56" height="40" rx="4" fill="#E85C7B" opacity="0.9"/>
+                    {/* Perforated edge (left side) */}
+                    <line x1="22" y1="12" x2="22" y2="52" stroke="#FAF7F4" strokeWidth="2" strokeDasharray="3 3"/>
+                    {/* "7 DAYS" text */}
+                    <text x="32" y="28" fill="white" fontSize="10" fontWeight="bold" textAnchor="middle">7</text>
+                    <text x="32" y="38" fill="white" fontSize="7" fontWeight="bold" textAnchor="middle">DAYS</text>
+                    <text x="32" y="46" fill="white" fontSize="5" textAnchor="middle">PASS</text>
+                    {/* Play button icon */}
+                    <circle cx="12" cy="32" r="6" fill="white" opacity="0.8"/>
+                    <path d="M10 28l6 4-6 4z" fill="#E85C7B"/>
                   </svg>
                 </div>
                 <div>
@@ -159,12 +180,35 @@ export default function DownsellPage() {
               </div>
             </div>
 
-            {/* Bullet 2 - Teal background */}
-            <div className="relative bg-gradient-to-br from-[#9DB4A8]/20 to-[#9DB4A8]/10 rounded-2xl p-5 sm:p-6 border border-[#9DB4A8]/30">
+            {/* Bullet 2 - Delete Decision Matrix with FLOWCHART graphic */}
+            <div className="relative bg-gradient-to-br from-[#9DB4A8]/20 to-[#9DB4A8]/10 rounded-2xl p-5 sm:p-6 border-2 border-[#9DB4A8]/40 overflow-hidden">
+              {/* Decorative corner arrow */}
+              <div className="absolute top-2 right-2 text-[#9DB4A8]/20">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H9M17 7v8"/>
+                </svg>
+              </div>
+
               <div className="flex items-start gap-4 sm:gap-5">
-                <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#9DB4A8] flex items-center justify-center mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                {/* CUSTOM GRAPHIC: Hand-drawn flowchart with decision boxes */}
+                <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 mt-1">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Top box (Start) */}
+                    <rect x="22" y="4" width="20" height="12" rx="2" fill="#9DB4A8" opacity="0.8" stroke="#5D4037" strokeWidth="1.5"/>
+                    {/* Arrow down */}
+                    <path d="M32 16 L32 22" stroke="#5D4037" strokeWidth="2"/>
+                    <path d="M32 22 L29 19 M32 22 L35 19" stroke="#5D4037" strokeWidth="2" strokeLinecap="round"/>
+                    {/* Diamond (Decision) */}
+                    <path d="M32 24 L44 34 L32 44 L20 34 Z" fill="#9DB4A8" opacity="0.9" stroke="#5D4037" strokeWidth="1.5"/>
+                    <text x="32" y="36" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle">?</text>
+                    {/* Left arrow (Delete) */}
+                    <path d="M20 34 L12 34" stroke="#5D4037" strokeWidth="2"/>
+                    <rect x="4" y="30" width="8" height="8" rx="1" fill="#E85C7B" opacity="0.8"/>
+                    <text x="8" y="36" fill="white" fontSize="8" textAnchor="middle">✕</text>
+                    {/* Right arrow (Keep) */}
+                    <path d="M44 34 L52 34" stroke="#5D4037" strokeWidth="2"/>
+                    <rect x="52" y="30" width="8" height="8" rx="1" fill="#9DB4A8" opacity="0.8"/>
+                    <text x="56" y="36" fill="white" fontSize="8" textAnchor="middle">✓</text>
                   </svg>
                 </div>
                 <div>
@@ -176,12 +220,38 @@ export default function DownsellPage() {
               </div>
             </div>
 
-            {/* Bullet 3 - Pink background */}
-            <div className="relative bg-gradient-to-br from-[#F4C7C3]/20 to-[#F4C7C3]/10 rounded-2xl p-5 sm:p-6 border border-[#F4C7C3]/30">
+            {/* Bullet 3 - AI Prompts with MAGIC STACK graphic */}
+            <div className="relative bg-gradient-to-br from-[#F4C7C3]/20 to-[#F4C7C3]/10 rounded-2xl p-5 sm:p-6 border-2 border-[#E85C7B]/30 overflow-hidden" style={{borderStyle: 'solid'}}>
+              {/* Decorative sparkles */}
+              <div className="absolute top-3 right-3 text-[#E85C7B]/30">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0l1.5 7.5L21 9l-7.5 1.5L12 18l-1.5-7.5L3 9l7.5-1.5z"/>
+                </svg>
+              </div>
+              <div className="absolute bottom-3 right-6 text-[#E85C7B]/20">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0l1.5 7.5L21 9l-7.5 1.5L12 18l-1.5-7.5L3 9l7.5-1.5z"/>
+                </svg>
+              </div>
+
               <div className="flex items-start gap-4 sm:gap-5">
-                <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#E85C7B] flex items-center justify-center mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                {/* CUSTOM GRAPHIC: Stack of prompt cards with AI sparkle */}
+                <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 mt-1">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Back cards (stacked effect) */}
+                    <rect x="14" y="14" width="36" height="28" rx="3" fill="#E85C7B" opacity="0.3" transform="rotate(-3 32 28)"/>
+                    <rect x="12" y="16" width="36" height="28" rx="3" fill="#E85C7B" opacity="0.5" transform="rotate(-1.5 30 30)"/>
+                    {/* Front card */}
+                    <rect x="10" y="18" width="36" height="28" rx="3" fill="#E85C7B" opacity="0.9" stroke="#5D4037" strokeWidth="1.5"/>
+                    {/* AI symbol (circuit/brain) */}
+                    <circle cx="28" cy="28" r="3" fill="white" opacity="0.9"/>
+                    <circle cx="28" cy="36" r="3" fill="white" opacity="0.9"/>
+                    <line x1="28" y1="31" x2="28" y2="33" stroke="white" strokeWidth="2"/>
+                    {/* "10" badge */}
+                    <circle cx="40" cy="26" r="8" fill="white"/>
+                    <text x="40" y="30" fill="#E85C7B" fontSize="10" fontWeight="bold" textAnchor="middle">10</text>
+                    {/* Magic sparkle */}
+                    <path d="M20 10 L21 14 L25 15 L21 16 L20 20 L19 16 L15 15 L19 14 Z" fill="#F4C7C3"/>
                   </svg>
                 </div>
                 <div>
@@ -193,12 +263,32 @@ export default function DownsellPage() {
               </div>
             </div>
 
-            {/* Bullet 4 - Teal background */}
-            <div className="relative bg-gradient-to-br from-[#9DB4A8]/20 to-[#9DB4A8]/10 rounded-2xl p-5 sm:p-6 border border-[#9DB4A8]/30">
+            {/* Bullet 4 - Trend Snapshot with UPWARD GRAPH graphic */}
+            <div className="relative bg-gradient-to-br from-[#9DB4A8]/20 to-[#9DB4A8]/10 rounded-2xl p-5 sm:p-6 border-2 border-[#9DB4A8]/40 overflow-hidden">
+              {/* Decorative "2025" badge in corner */}
+              <div className="absolute top-2 right-2 bg-[#9DB4A8] rounded-full px-2 py-0.5">
+                <span className="text-white text-xs font-bold">2025</span>
+              </div>
+
               <div className="flex items-start gap-4 sm:gap-5">
-                <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#9DB4A8] flex items-center justify-center mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                {/* CUSTOM GRAPHIC: Upward trending graph */}
+                <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 mt-1">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Graph background */}
+                    <rect x="8" y="8" width="48" height="48" rx="4" fill="#9DB4A8" opacity="0.2" stroke="#9DB4A8" strokeWidth="2"/>
+                    {/* Grid lines */}
+                    <line x1="8" y1="20" x2="56" y2="20" stroke="#9DB4A8" strokeWidth="0.5" opacity="0.3"/>
+                    <line x1="8" y1="32" x2="56" y2="32" stroke="#9DB4A8" strokeWidth="0.5" opacity="0.3"/>
+                    <line x1="8" y1="44" x2="56" y2="44" stroke="#9DB4A8" strokeWidth="0.5" opacity="0.3"/>
+                    {/* Upward trend line */}
+                    <path d="M12 48 L24 38 L36 32 L48 16" stroke="#9DB4A8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    {/* Data points */}
+                    <circle cx="12" cy="48" r="3" fill="white" stroke="#9DB4A8" strokeWidth="2"/>
+                    <circle cx="24" cy="38" r="3" fill="white" stroke="#9DB4A8" strokeWidth="2"/>
+                    <circle cx="36" cy="32" r="3" fill="white" stroke="#9DB4A8" strokeWidth="2"/>
+                    <circle cx="48" cy="16" r="3" fill="#9DB4A8"/>
+                    {/* Arrow pointing up */}
+                    <path d="M48 16 L48 8 M48 8 L44 12 M48 8 L52 12" stroke="#9DB4A8" strokeWidth="2.5" strokeLinecap="round"/>
                   </svg>
                 </div>
                 <div>
