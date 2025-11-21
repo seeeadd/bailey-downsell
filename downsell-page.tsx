@@ -558,8 +558,19 @@ export default function DownsellPage() {
             </div>
 
             {/* ITEM 2: Thumbnail & Shop Visual Frameworks */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="grid md:grid-cols-3 gap-6 p-8">
+            {/* ARTISTIC: Same layered shadow + texture treatment as item 1 */}
+            <div className="group relative bg-white rounded-2xl shadow-[0_4px_0_0_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.05),0_16px_32px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+              {/* Linen texture */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjEuMiIgbnVtT2N0YXZlcz0iMyIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIi8+PC9zdmc+')]"></div>
+
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                <svg viewBox="0 0 100 100" className="text-[#9DB4A8]">
+                  <circle cx="100" cy="0" r="80" fill="currentColor"/>
+                </svg>
+              </div>
+
+              <div className="relative grid md:grid-cols-3 gap-6 p-8">
 
                 <div className="md:col-span-2">
                   <div className="flex items-start gap-4 mb-4">
@@ -621,8 +632,19 @@ export default function DownsellPage() {
             </div>
 
             {/* ITEM 3: Keyword & Tag Starter Sheets */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="grid md:grid-cols-3 gap-6 p-8">
+            {/* ARTISTIC: Consistent treatment across all vault cards */}
+            <div className="group relative bg-white rounded-2xl shadow-[0_4px_0_0_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.05),0_16px_32px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+              {/* Linen texture */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjEuMiIgbnVtT2N0YXZlcz0iMyIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIi8+PC9zdmc+')]"></div>
+
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                <svg viewBox="0 0 100 100" className="text-[#F4C7C3]">
+                  <circle cx="100" cy="0" r="80" fill="currentColor"/>
+                </svg>
+              </div>
+
+              <div className="relative grid md:grid-cols-3 gap-6 p-8">
 
                 <div className="md:col-span-2">
                   <div className="flex items-start gap-4 mb-4">
@@ -687,8 +709,19 @@ export default function DownsellPage() {
             </div>
 
             {/* ITEM 4: Pricing & Offer Cheatsheet */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="grid md:grid-cols-3 gap-6 p-8">
+            {/* ARTISTIC: Final vault card with same premium treatment */}
+            <div className="group relative bg-white rounded-2xl shadow-[0_4px_0_0_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_0_0_rgba(0,0,0,0.05),0_16px_32px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+              {/* Linen texture */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjEuMiIgbnVtT2N0YXZlcz0iMyIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIi8+PC9zdmc+')]"></div>
+
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                <svg viewBox="0 0 100 100" className="text-[#9DB4A8]">
+                  <circle cx="100" cy="0" r="80" fill="currentColor"/>
+                </svg>
+              </div>
+
+              <div className="relative grid md:grid-cols-3 gap-6 p-8">
 
                 <div className="md:col-span-2">
                   <div className="flex items-start gap-4 mb-4">
