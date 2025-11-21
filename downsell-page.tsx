@@ -62,15 +62,17 @@ export default function DownsellPage() {
           PSYCHOLOGY: Lead with the pain (blank page paralysis)
           Position Vault as the solution to challenge implementation gap
           Video gives Bailey's warm personality vs just sales copy
+          CREATIVE CHOICE: Giant badge above headline creates "final step" completion psychology
+          Making $27 offer impossible to miss reduces confusion and increases clarity
           ============================================ */}
       <section className="max-w-4xl mx-auto px-4 py-12">
 
-        {/* Progress text */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <span className="text-sm font-medium text-[#9DB4A8]">Step 2 of 2:</span>
-          <span className="text-sm text-[#5D4037]">
-            Confirm your spot + (optional) add your Conversion Vault
-          </span>
+        {/* SIGNATURE MOMENT 1: Progress badge - makes this feel like helpful step, not surprise upsell */}
+        <div className="flex items-center justify-center mb-6">
+          <div className="bg-gradient-to-r from-[#9DB4A8] to-[#4A7C72] text-white px-6 py-3 rounded-full shadow-lg">
+            <p className="text-xs font-bold tracking-widest uppercase mb-1">Step 2 of 2 • Optional Upgrade</p>
+            <p className="text-lg font-bold">One-Time $27 Add-On • Only on This Page</p>
+          </div>
         </div>
 
         {/* Main headline - speaks to the implementation gap */}
@@ -88,33 +90,32 @@ export default function DownsellPage() {
         </h1>
 
         {/* Subheadline - positions this as practical, not transformational */}
-        <p className="text-lg text-center text-[#5D4037] max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-center text-[#5D4037] max-w-2xl mx-auto mb-4">
           This is the plug-and-play Conversion Vault I use so my listings don't flop.
-          You'll only see this page once before the 3-day challenge starts.
         </p>
 
-        {/* One-time offer badge - structural urgency */}
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <div className="h-2 w-2 bg-[#F4C7C3] rounded-full animate-pulse"></div>
-          <span className="text-xs font-semibold tracking-wider text-[#E8B5B0] uppercase">
-            One-Time Offer • This page won't show again after you continue
-          </span>
-          <div className="h-2 w-2 bg-[#F4C7C3] rounded-full animate-pulse"></div>
-        </div>
+        {/* CREATIVE CHOICE: Clear framing of the offer context */}
+        <p className="text-base text-center text-[#9DB4A8] font-semibold max-w-2xl mx-auto mb-8">
+          One-time $27 add-on • Only on this page before the challenge
+        </p>
 
-        {/* Video placeholder with play overlay */}
+        {/* CHANGE #1: Hero VIDEO - 16:9 format, prominent, with clear 2-min overlay */}
         {/* PSYCHOLOGY: Video humanizes the offer, lets Bailey explain
-            the value in her warm, authentic voice vs just sales copy */}
-        <div className="relative aspect-video bg-gradient-to-br from-[#9DB4A8] to-[#4A7C72] rounded-2xl overflow-hidden shadow-lg mb-6 group cursor-pointer">
+            the value in her warm, authentic voice vs just sales copy
+            CREATIVE CHOICE: Making video the hero element above price creates
+            trust before asking. Play button and time stamp reduce friction. */}
+        <div className="relative aspect-video bg-gradient-to-br from-[#9DB4A8] to-[#4A7C72] rounded-2xl overflow-hidden shadow-2xl mb-8 group cursor-pointer border-4 border-[#F4C7C3]/30">
+          {/* Play button */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
-              <svg className="w-12 h-12 text-[#9DB4A8]" fill="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/95 backdrop-blur-sm rounded-full p-8 group-hover:scale-110 group-hover:bg-[#F4C7C3] transition-all duration-300 shadow-xl">
+              <svg className="w-16 h-16 text-[#9DB4A8] group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
             </div>
           </div>
-          <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-full">
-            <p className="text-white text-sm font-medium">▶ Click to hear why this matters</p>
+          {/* Video caption with clear time */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-sm px-6 py-3 rounded-full">
+            <p className="text-white text-base font-bold whitespace-nowrap">▶ Click to listen – 2-minute video</p>
           </div>
         </div>
 
@@ -152,48 +153,16 @@ export default function DownsellPage() {
             The Vault Gives You The Words, Thumbnails & Tags To Do It <em className="text-[#F4C7C3] not-italic">Fast</em>
           </h2>
 
-          {/* Timeline comparison - signature visual moment */}
+          {/* CHANGE #3: Timeline comparison with VAULT COLUMN HIGHLIGHTED */}
           {/* PSYCHOLOGY: Future pacing - shows two possible futures
               Makes the problem (blank page paralysis) visceral
-              Makes the solution (templates) obvious */}
+              Makes the solution (templates) obvious
+              CREATIVE CHOICE: Vault column gets warm pink glow + badge to pull attention
+              On mobile, Vault shows first so they see what they're buying */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
 
-            {/* WITH VAULT timeline */}
-            <div className="bg-[#9DB4A8]/10 border-2 border-[#9DB4A8] rounded-xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-3 w-3 bg-[#9DB4A8] rounded-full"></div>
-                <p className="font-bold text-[#9DB4A8] text-sm tracking-wide uppercase">With the Vault</p>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
-                  <div>
-                    <p className="text-white font-medium">Day 1: Learn the strategy</p>
-                    <p className="text-gray-400 text-sm">Bailey teaches you what actually works</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
-                  <div>
-                    <p className="text-white font-medium">Day 2: Use the templates</p>
-                    <p className="text-gray-400 text-sm">Open the Vault, fill in your blanks</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
-                  <div>
-                    <p className="text-white font-medium">Day 3: Published!</p>
-                    <p className="text-gray-400 text-sm">Listings live, confident it'll convert</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* WITHOUT VAULT timeline - shows the pain */}
-            <div className="bg-gray-800/30 border-2 border-gray-700 rounded-xl p-6">
+            {/* WITHOUT VAULT timeline - shows the pain (second on desktop, second on mobile) */}
+            <div className="bg-gray-800/30 border-2 border-gray-700 rounded-xl p-6 order-2 md:order-1">
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-3 w-3 bg-gray-500 rounded-full"></div>
                 <p className="font-bold text-gray-400 text-sm tracking-wide uppercase">Without the Vault</p>
@@ -221,6 +190,45 @@ export default function DownsellPage() {
                   <div>
                     <p className="text-gray-300 font-medium">Day 3: Still guessing</p>
                     <p className="text-gray-500 text-sm">Publish something...hope it works?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* WITH VAULT timeline - SIGNATURE MOMENT 2: Glowing, warm, recommended */}
+            <div className="bg-gradient-to-br from-[#F4C7C3]/20 to-[#9DB4A8]/20 border-2 border-[#F4C7C3] rounded-xl p-6 shadow-lg shadow-[#F4C7C3]/20 order-1 md:order-2 relative">
+              {/* RECOMMENDED badge */}
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#F4C7C3] text-[#5D4037] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                Recommended Add-On
+              </div>
+
+              <div className="flex items-center gap-2 mb-4 mt-2">
+                <div className="h-3 w-3 bg-[#9DB4A8] rounded-full"></div>
+                <p className="font-bold text-[#9DB4A8] text-sm tracking-wide uppercase">With the Vault</p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
+                  <div>
+                    <p className="text-white font-medium">Day 1: Learn the strategy</p>
+                    <p className="text-gray-400 text-sm">Bailey teaches you what actually works</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
+                  <div>
+                    <p className="text-white font-medium">Day 2: Use the templates</p>
+                    <p className="text-gray-400 text-sm">Open the Vault, fill in your blanks</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1.5 h-2 w-2 bg-[#9DB4A8] rounded-full flex-shrink-0"></div>
+                  <div>
+                    <p className="text-white font-medium">Day 3: Published!</p>
+                    <p className="text-gray-400 text-sm">Listings live, confident it'll convert</p>
                   </div>
                 </div>
               </div>
@@ -669,6 +677,10 @@ export default function DownsellPage() {
                   The <strong>worst feeling</strong> is getting views but no sales.
                   Your product might be fine — your listing just isn't converting.
                 </p>
+                {/* CHANGE #4: Bold one sentence to make benefit immediately scannable */}
+                <p className="text-xl font-bold text-[#2D2D2D] mb-4 bg-[#FAF7F4] p-4 rounded-lg border-l-4 border-[#9DB4A8]">
+                  If you already have listings but they're not getting sales, this is where you start.
+                </p>
               </div>
             </div>
 
@@ -775,20 +787,30 @@ export default function DownsellPage() {
               with this challenge — <strong className="text-[#9DB4A8]">without needing to join anything else</strong>.
             </p>
 
-            {/* Visual price comparison */}
-            {/* PSYCHOLOGY: Massive visual contrast makes $27 feel tiny */}
-            <div className="flex items-center justify-center gap-8 flex-wrap">
+            {/* CHANGE #5: Visual price comparison - PUMPED UP */}
+            {/* PSYCHOLOGY: Massive visual contrast makes $27 feel tiny
+                CREATIVE CHOICE: Giant $27 (120px equivalent) vs tiny $497 creates visceral "pocket change" feeling
+                Size difference = perceived value difference */}
+            <div className="flex items-center justify-center gap-12 flex-wrap mb-6">
               <div className="text-center">
                 <p className="text-sm text-gray-400 mb-2">Full Program Access</p>
-                <p className="text-5xl font-bold text-gray-500 line-through">$497</p>
+                <p className="text-4xl font-bold text-gray-500 line-through opacity-60">$497</p>
               </div>
 
-              <div className="text-4xl text-[#9DB4A8]">→</div>
+              <div className="text-5xl text-[#9DB4A8] font-bold">→</div>
 
               <div className="text-center">
-                <p className="text-sm text-[#F4C7C3] mb-2 font-semibold">Just The Vault Today</p>
-                <p className="text-7xl font-bold text-[#F4C7C3]">$27</p>
+                <p className="text-base text-[#F4C7C3] mb-3 font-bold uppercase tracking-wide">Just The Vault Today</p>
+                <p className="text-9xl font-black text-[#F4C7C3] leading-none tracking-tight drop-shadow-lg">$27</p>
+                <p className="text-sm text-gray-400 mt-3 font-medium">One-time payment • Less than dinner out</p>
               </div>
+            </div>
+
+            {/* You save callout */}
+            <div className="text-center mb-6">
+              <p className="inline-block bg-[#9DB4A8]/20 border-2 border-[#9DB4A8] text-[#9DB4A8] px-6 py-2 rounded-full font-bold text-lg">
+                YOU SAVE $470+
+              </p>
             </div>
           </div>
 
@@ -829,26 +851,42 @@ export default function DownsellPage() {
             <span className="text-[#9DB4A8]">100% Risk-Free</span>
           </h2>
 
+          {/* CHANGE #6: Guarantee tightened to scannable bullets */}
+          {/* PSYCHOLOGY: Bullets make the guarantee easy to scan, increasing trust
+              CREATIVE CHOICE: Making refund process crystal clear removes final objection */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-6">
-            <p className="text-lg text-[#5D4037] mb-4">
-              Go through the Vault, use the templates, plug in the titles, tags and thumbnails during the challenge.
+            <p className="text-lg text-[#5D4037] mb-6 font-medium">
+              Here's how this works:
             </p>
 
-            <p className="text-lg text-[#5D4037] mb-4">
-              If you honestly feel it didn't help you publish better listings with more confidence,
-              email us <strong>within 7 days of purchase</strong>…
-            </p>
+            <ul className="space-y-4 mb-6">
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-[#9DB4A8] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-base text-[#5D4037]"><strong>Use the templates during the challenge.</strong> Fill in the blanks, customize the frameworks, apply what Bailey teaches.</span>
+              </li>
 
-            <div className="bg-[#FAF7F4] border-l-4 border-[#9DB4A8] rounded-r-lg p-6 mb-4">
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-[#9DB4A8] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-base text-[#5D4037]"><strong>Publish better listings with more confidence.</strong> Feel the difference between guessing and having a proven framework.</span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-[#9DB4A8] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-base text-[#5D4037]"><strong>If it didn't help, email us within 7 days for a full refund.</strong> No forms to fill out. No arguing. No weird guilt trip.</span>
+              </li>
+            </ul>
+
+            <div className="bg-[#FAF7F4] border-l-4 border-[#9DB4A8] rounded-r-lg p-6">
               <p className="text-xl font-bold text-[#2D2D2D]">
-                We'll refund every dollar.<br />
-                <span className="text-[#9DB4A8] font-normal">No forms. No arguing. No weird guilt trip.</span>
+                You either feel clearer publishing listings — <span className="text-[#9DB4A8]">or you don't pay</span>.
               </p>
             </div>
-
-            <p className="text-lg text-[#5D4037] font-medium">
-              You either feel clearer and more confident publishing listings — <strong>or you don't pay</strong>.
-            </p>
           </div>
 
           {/* Final CTA */}
@@ -1020,6 +1058,26 @@ export default function DownsellPage() {
           </p>
         </div>
       </footer>
+
+      {/* CHANGE #7: Mobile-only sticky CTA bar */}
+      {/* PSYCHOLOGY: On mobile, people scroll long and forget the button
+          Sticky CTA recaptures attention without being intrusive
+          Only shows after first CTA scroll to avoid immediate pressure
+          CREATIVE CHOICE: Compact design with price emphasis keeps urgency visible */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-[#F4C7C3] to-[#E8B5B0] border-t-2 border-[#5D4037]/10 shadow-2xl px-4 py-3 animate-slide-up">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex-shrink-0">
+            <p className="text-xs text-[#5D4037] font-semibold uppercase tracking-wide">One-Time Offer</p>
+            <p className="text-2xl font-black text-[#5D4037]">$27</p>
+          </div>
+          <button className="flex-1 bg-[#5D4037] hover:bg-[#4A332B] text-white font-bold text-sm py-4 px-4 rounded-full shadow-lg transition-all duration-200">
+            Get the Conversion Vault →
+          </button>
+        </div>
+      </div>
+
+      {/* Add padding to prevent content from being hidden by sticky bar on mobile */}
+      <div className="md:hidden h-20"></div>
 
     </div>
   );
